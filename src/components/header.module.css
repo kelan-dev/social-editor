@@ -1,0 +1,66 @@
+.header {
+  background-image: linear-gradient(to right, #18a0be, #622db9);
+  height: var(--header-height);
+  display: flex;
+}
+
+.header > *:global {
+  animation: fade-in-from-top 0.5s;
+}
+
+.header > *:nth-of-type(4) {
+  margin-left: auto;
+}
+
+.logo {
+  align-self: center;
+  margin-inline-start: 1.5rem;
+  margin-inline-end: 2rem;
+}
+
+.header > button {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.header > button:hover,
+.header > button:focus {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.profile > img {
+  width: 2rem;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .header > button:nth-of-type(1),
+  .header > button:nth-of-type(2),
+  .header > button:nth-of-type(3) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .header > button:nth-of-type(4),
+  .header > button:nth-of-type(5) {
+    display: none;
+  }
+}
